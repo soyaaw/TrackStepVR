@@ -6,6 +6,16 @@ TrackStepVR uses two SteamVR foot trackers to generate forward movement input fo
 
 Get the latest Windows release from the [TrackStepVR Releases page](https://github.com/soyaaw/TrackStepVR/releases/latest).
 
+## Run from the release ZIP
+
+1. Download `TrackStepVR.zip` from the latest release.
+2. Extract the ZIP and keep all extracted files together in the same folder.
+3. Start SteamVR and connect both foot trackers.
+4. Enable OSC in VRChat.
+5. Run `TrackStepVR.exe` and follow the calibration prompts.
+
+You can run the released app directly; you do not need to build the source code first.
+
 ## Requirements
 
 - Windows 10 or newer
