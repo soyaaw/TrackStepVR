@@ -9,7 +9,8 @@ TrackStepVR is a Windows .NET 10 WinForms app that reads foot trackers through S
 - `Program.cs` starts the WinForms application.
 - `MainForm.cs` owns the UI behavior, settings, calibration prompts, and shutdown flow.
 - `MainForm.Designer.cs` contains the WinForms layout and control initialization. Keep it consistent with `MainForm.cs` when changing UI text or controls.
-- `TrackerService.cs` owns the background SteamVR/OpenVR tracking loop, foot calibration and state, movement calculation, and OSC output.
+- `TrackerService.cs` owns the background SteamVR/OpenVR tracking loop, foot calibration and state, and movement calculation. It calls `OscSender` to send movement values.
+- `OscSender.cs` creates OSC float packets and sends them over UDP to VRChat.
 - `openvr_api.cs` and `openvr_api.dll` are generated/vendor OpenVR bindings. Avoid hand-editing them; warnings there are generally upstream binding warnings.
 - `TrackStepVR.csproj` is the project file; `TrackStepVR.slnx` is the solution.
 
@@ -26,7 +27,7 @@ TrackStepVR is a Windows .NET 10 WinForms app that reads foot trackers through S
 
 ## Change guidance
 
-- Keep movement thresholds, smoothing, calibration timing, and OSC behavior understandable and centralized in `TrackerService.cs`.
+- Keep movement thresholds, smoothing, and calibration timing in `TrackerService.cs`. Keep OSC packet formatting and UDP sending in `OscSender.cs`.
 - Avoid silently changing defaults or calibration prompts; explain user-visible behavior changes in the UI/help text.
 - When changing a setting, update its UI readout, persistence, and service setter together.
 - When changing controls, update the designer and event wiring consistently.
