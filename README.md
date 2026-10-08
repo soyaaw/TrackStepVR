@@ -2,6 +2,10 @@
 
 TrackStepVR uses two SteamVR foot trackers to generate forward movement input for VRChat. It reads tracker movement through OpenVR and sends OSC input to VRChat.
 
+## Download
+
+Get the latest Windows release from the [TrackStepVR Releases page](https://github.com/soyaaw/TrackStepVR/releases/latest).
+
 ## Requirements
 
 - Windows 10 or newer
