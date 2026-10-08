@@ -63,7 +63,8 @@ Use Visual Studio's **Publish** action and select a folder target. Publish for `
 ## Project files
 
 - `MainForm.cs` and `MainForm.Designer.cs` contain the user interface.
-- `TrackerService.cs` contains SteamVR tracking, calibration, movement, and OSC logic.
+- `TrackerService.cs` contains SteamVR tracking, calibration, and movement logic.
+- `OscSender.cs` creates and sends OSC packets over UDP.
 - `Program.cs` starts the application.
 - `openvr_api.cs` and `openvr_api.dll` provide the OpenVR bindings.
 - `AGENTS.md` contains project-specific development notes.
